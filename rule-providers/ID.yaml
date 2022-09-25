@@ -1,0 +1,71 @@
+proxies:
+
+- name: ID-IKD
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 19105900-3ad0-11ed-9be6-1239d0255272
+  skip-cert-verify: true
+  sni: idtj-ikd.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: idtj-ikd.bonds.id
+  udp: true
+
+- name: ID-BIZNET
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 3ec5bfa0-3ad0-11ed-a7b4-1239d0255272
+  skip-cert-verify: true
+  sni: id2-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: id2-trojan.bonds.id
+  udp: true
+
+- name: ID-HERZA-JKT
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 6c8c2480-3ad0-11ed-a7b7-1239d0255272
+  skip-cert-verify: true
+  sni: idtj-herza.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: idtj-herza.bonds.id
+  udp: true
+
+- name: ID-BIZNET-BANTEN
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 940b62f0-3ad0-11ed-944f-1239d0255272
+  skip-cert-verify: true
+  sni: id5-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: id5-trojan.bonds.id
+  udp: true
+
+- name: jupitervpn-hshaa-1-10-22
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: jupitervpn-hshaa
+  skip-cert-verify: true
+  sni: id2.sjupiter.net
+  network: ws
+  ws-opts:
+    path: /trojan-go
+    headers:
+      Host: id2.sjupiter.net
+  udp: true

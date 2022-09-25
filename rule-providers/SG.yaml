@@ -1,0 +1,144 @@
+proxies:
+- name: SG-HE1-1
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: c0a6ca10-3ad1-11ed-9fea-1239d0255272
+  skip-cert-verify: true
+  sni: sg1-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      host: sg1-trojan.bonds.id
+  udp: true
+- name: SG-HE1-2
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 8ce7aa00-3be9-11ed-9908-1239d0255272
+  skip-cert-verify: true
+  sni: sg1-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      host: sg1-trojan.bonds.id
+  udp: true
+- name: SG-HE1-3
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 6b38aef0-3c11-11ed-9039-1239d0255272
+  skip-cert-verify: false
+  sni: sg1-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg1-trojan.bonds.id
+  udp: true
+- name: SG-HE2-1
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: b34cddc0-3be9-11ed-bd2d-1239d0255272
+  skip-cert-verify: true
+  sni: sg2-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      host: sg2-trojan.bonds.id
+  udp: true
+- name: SG-HE2-2
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 456c78e0-3bd3-11ed-b364-1239d0255272
+  skip-cert-verify: true
+  sni: sg2-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      host: sg2-trojan.bonds.id
+  udp: true
+- name: SG-HE2-3
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 282e3960-3ad1-11ed-ba00-1239d0255272
+  skip-cert-verify: true
+  sni: sg2-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      host: sg2-trojan.bonds.id
+  udp: true
+- name: SG-HE3-1
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 48e063e0-3ad1-11ed-98bc-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      host: sg3-trojan.bonds.id
+  udp: true
+- name: SG-HE3-2
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: d29b5f70-3be9-11ed-9bd5-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      host: sg3-trojan.bonds.id
+  udp: true
+- name: SG-HE3-3
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 523344f0-3c11-11ed-8b4f-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      host: sg3-trojan.bonds.id
+  udp: true
+- name: SG-HE-MUX
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 94376720-3ad1-11ed-b644-1239d0255272
+  skip-cert-verify: true
+  sni: sg6-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      host: sg6-trojan.bonds.id
+  udp: true
+- name: SG UDPGW
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 6a0f73a0-3ad1-11ed-9a01-1239d0255272
+  skip-cert-verify: true
+  sni: sg8-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg8-trojan.bonds.id
+  udp: true
