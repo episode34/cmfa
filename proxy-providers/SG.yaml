@@ -142,3 +142,19 @@ proxies:
     headers:
       Host: sg8-trojan.bonds.id
   udp: true
+- name: sg2-v2ray.sshkit.org-25-10
+  server: 172.67.199.34
+  type: vmess
+  port: 443
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg2-v2ray.sshkit.org
+  network: ws
+  ws-opts:
+    path: /sshkit/985349787/632f4cba6f0b1/
+    headers:
+      Host: sg2-v2ray.sshkit.org
+  udp: true
