@@ -171,3 +171,42 @@ proxies:
     headers:
       Host: sg1-trojan.bonds.id
   udp: true
+- name: dhdhfd
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 1f68e2c0-3d03-11ed-9527-1239d0255272
+  skip-cert-verify: true
+  sni: sg1-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg1-trojan.bonds.id
+  udp: true
+- name: sgsyft
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: 83d84c20-3d03-11ed-a15f-1239d0255272
+  skip-cert-verify: true
+  sni: sg2-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg2-trojan.bonds.id
+  udp: true
+- name: yffugugu
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: d6fbcde0-3d03-11ed-b95e-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3-trojan.bonds.id
+  udp: true
