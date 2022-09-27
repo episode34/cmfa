@@ -75,7 +75,7 @@ proxy-groups:
       - REJECT
       - MAIN
 rules:
-  - RULE-SET,Rule-basicads,adblock
-  - RULE-SET,Rule-personalads,adblock
+  - RULE-SET,Rule-basicads,Adblock
+  - RULE-SET,Rule-personalads,Adblock
   - RULE-SET,Rule-unityadsdomain,REJECT
   - MATCH,MAIN
