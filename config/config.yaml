@@ -56,11 +56,17 @@ proxy-providers:
     url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/TH3SG.yaml
     path: "./SG.yaml"
     interval: 300
+  MST:
+    type: http
+    url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/MST.yaml
+    path: "./MST.yaml"
+    interval: 300 
 proxy-groups:
   - name: MAIN
     type: select
     proxies:
       - BEST-PING
+      - BEST-PING2
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
@@ -69,6 +75,14 @@ proxy-groups:
     proxies:
     use:
       - SG
+  - name: BEST-PING2
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+    use:
+      - MST
   - name: Adblock
     type: select
     proxies:
