@@ -31,6 +31,25 @@ dns:
     - 8.8.8.8
     - 1.1.1.1
     - 112.215.203.254
+rule-providers:
+  Rule-basicads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_basicads.yaml
+    path: "./Basicads.yaml"
+    interval: 86400
+  Rule-personalads:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_personalads.yaml
+    path: "./Personalads.yaml"
+    interval: 86400
+  Rule-unityadsdomain:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/episode34/cmfa/main/rule-providers/unityadsdomain.yaml
+    path: "./unityadsdomain"
+    interval: 86400
 proxy-providers:
   SG:
     type: http
@@ -50,5 +69,14 @@ proxy-groups:
     proxies:
     use:
       - SG
+  - name: Adblock
+    type: select
+    proxies:
+      - REJECT
+    use:
+      - SG
 rules:
+  - RULE-SET,Rule-basicads,adblock
+  - RULE-SET,Rule-personalads,adblock
+  - RULE-SET,Rule-unityadsdomain,REJECT
   - MATCH,MAIN
