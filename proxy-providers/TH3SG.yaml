@@ -1,8 +1,6 @@
-BUG:
-  - &bug1 172.67.199.34
 proxies:
   - name: SG1
-    server: *bug1
+    server: 172.67.199.34
     port: 443
     type: trojan
     password: 9ca73b40-3e7a-11ed-89a2-1239d0255272
@@ -15,7 +13,7 @@ proxies:
         Host: sg1-trojan.bonds.id
     udp: true
   - name: SG2
-    server: *bug1
+    server: 172.67.199.34
     port: 443
     type: trojan
     password: bcee3e10-3e7a-11ed-aa0e-1239d0255272
@@ -28,7 +26,7 @@ proxies:
         Host: sg2-trojan.bonds.id
     udp: true
   - name: SG3
-    server: *bug1
+    server: 172.67.199.34
     port: 443
     type: trojan
     password: cf56b990-3e7a-11ed-97b8-1239d0255272
