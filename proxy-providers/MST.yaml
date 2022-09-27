@@ -1,0 +1,27 @@
+proxies:
+  - name: sg2tws.mainssh.xyz
+    server: 172.67.199.34
+    port: 443
+    type: trojan
+    password: mainssh-testwww
+    skip-cert-verify: true
+    sni: sg2tws.mainssh.xyz
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: sg2tws.mainssh.xyz
+    udp: true
+  - name: sg3tws.mainssh.xyz
+    server: 172.67.199.34
+    port: 443
+    type: trojan
+    password: mainssh-test222
+    skip-cert-verify: true
+    sni: sg3tws.mainssh.xyz
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: sg3tws.mainssh.xyz
+    udp: true
