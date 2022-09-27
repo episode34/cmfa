@@ -73,8 +73,7 @@ proxy-groups:
     type: select
     proxies:
       - REJECT
-    use:
-      - SG
+      - MAIN
 rules:
   - RULE-SET,Rule-basicads,adblock
   - RULE-SET,Rule-personalads,adblock
