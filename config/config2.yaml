@@ -60,10 +60,8 @@ proxy-groups:
   - name: MAIN
     type: select
     proxies:
-      - TROJAN
-      - MST
-      - MSVless
-  - name: BEST-PING
+      - SG-test
+  - name: SG-test
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
