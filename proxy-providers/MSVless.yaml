@@ -14,3 +14,63 @@ proxies:
       headers:
         Host: sg2lws.mainssh.xyz
     udp: true
+  - name: mainssh-idlws
+    server: 172.67.199.34
+    port: 443
+    type: vless
+    uuid: ad06692f-58dd-4b83-8891-9cfc4bc90b9b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idlws.mainssh.xyz
+    udp: true
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: idlws.mainssh.xyz
+  - name: mainssh-sglws
+    server: 172.67.199.34 
+    port: 443
+    type: vless
+    uuid: 3d9fbee7-9210-465d-bc06-6bb22a419b30
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sglws.mainssh.xyz
+    udp: true
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sglws.mainssh.xyz
+  - name: mainssh-sg3lws
+    server: 172.67.199.34 
+    port: 443
+    type: vless
+    uuid: 99156741-e08b-4d6c-90cc-7637ecef4603
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3lws.mainssh.xyz
+    udp: true
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sg3lws.mainssh.xyz
+  - name: mainssh-sg2lws
+    server: 172.67.199.34 
+    port: 443
+    type: vless
+    uuid: bed95a8f-f747-4e71-a8df-f86b4c7c2560
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2lws.mainssh.xyz
+    udp: true
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sg2lws.mainssh.xyz
