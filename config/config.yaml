@@ -60,7 +60,12 @@ proxy-providers:
     type: http
     url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/MST.yaml
     path: "./MST.yaml"
-    interval: 300 
+    interval: 300
+  MSVless:
+    type: http
+    url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/MSVless.yaml
+    path: "./MSVless"
+    interval: 300
 proxy-groups:
   - name: MAIN
     type: select
