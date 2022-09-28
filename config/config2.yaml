@@ -53,18 +53,8 @@ rule-providers:
 proxy-providers:
   SG:
     type: http
-    url: 
+    url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers2/Trojan.yaml
     path: "./SG.yaml"
-    interval: 300
-  MST:
-    type: http
-    url: 
-    path: "./MST.yaml"
-    interval: 300
-  MSVless:
-    type: http
-    url: 
-    path: "./MSVless"
     interval: 300
 proxy-groups:
   - name: MAIN
@@ -81,22 +71,6 @@ proxy-groups:
     proxies:
     use:
       - SG
-  - name: VMESS
-    type: url-test
-    url: http://hi.bonds.id/ping
-    interval: 300
-    tolerance: 50
-    proxies:
-    use:
-      - MST
-  - name: VLESS
-    type: url-test
-    url: http://hi.bonds.id/ping
-    interval: 300
-    tolerance: 50
-    proxies:
-    use:
-      - MSVless
   - name: Adblock
     type: select
     proxies:
