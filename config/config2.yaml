@@ -1,0 +1,109 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: info
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+rule-providers:
+  Rule-basicads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_basicads.yaml
+    path: "./Basicads.yaml"
+    interval: 86400
+  Rule-personalads:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_personalads.yaml
+    path: "./Personalads.yaml"
+    interval: 86400
+  Rule-unityadsdomain:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/episode34/cmfa/main/rule-providers/unityadsdomain.yaml
+    path: "./unityadsdomain"
+    interval: 86400
+proxy-providers:
+  SG:
+    type: http
+    url: 
+    path: "./SG.yaml"
+    interval: 300
+  MST:
+    type: http
+    url: 
+    path: "./MST.yaml"
+    interval: 300
+  MSVless:
+    type: http
+    url: 
+    path: "./MSVless"
+    interval: 300
+proxy-groups:
+  - name: MAIN
+    type: select
+    proxies:
+      - TROJAN
+      - MST
+      - MSVless
+  - name: BEST-PING
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+    use:
+      - SG
+  - name: VMESS
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+    use:
+      - MST
+  - name: VLESS
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+    use:
+      - MSVless
+  - name: Adblock
+    type: select
+    proxies:
+      - REJECT
+      - MAIN
+rules:
+  - RULE-SET,Rule-basicads,Adblock
+  - RULE-SET,Rule-personalads,Adblock
+  - RULE-SET,Rule-unityadsdomain,REJECT
+  - MATCH,MAIN
