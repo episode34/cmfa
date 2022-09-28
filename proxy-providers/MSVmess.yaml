@@ -1,0 +1,17 @@
+proxies:
+  - name: mainssh.com-id
+    server: 172.67.199.34
+    port: 443
+    type: vmess
+    uuid: d71aac9e-70df-4f9b-b596-d1bb05c0f301
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idmws.mainssh.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: idmws.mainssh.xyz
+    udp: true
