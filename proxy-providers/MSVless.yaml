@@ -1,0 +1,16 @@
+proxies:
+  - name: mainssh-vless1
+    server: 172.67.199.34
+    port: 443
+    type: vless
+    uuid: f35229da-13f8-45e5-ab3d-d94da9e3ce19
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2lws.mainssh.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sg2lws.mainssh.xyz
+    udp: true
