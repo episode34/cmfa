@@ -64,7 +64,12 @@ proxy-providers:
   MSVless:
     type: http
     url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/MSVless.yaml
-    path: "./MSVless"
+    path: "./MSVless.yaml"
+    interval: 300
+  MSVmess:
+    type: http
+    url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/MSVmess.yaml
+    path: "./MSVmess.yaml"
     interval: 300
 proxy-groups:
   - name: MAIN
@@ -73,6 +78,7 @@ proxy-groups:
       - BEST-PING
       - MST
       - MSVless
+      - MSVmess
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
@@ -97,6 +103,14 @@ proxy-groups:
     proxies:
     use:
       - MSVless
+  - name: MSVmess
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+    use:
+      - MSVmess
   - name: Adblock
     type: select
     proxies:
