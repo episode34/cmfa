@@ -131,6 +131,7 @@ proxy-groups:
       - REJECT
       - MAIN
 rules:
+  - GEOSITE,unity,REJECT
   - RULE-SET,Rule-basicads,Adblock
   - RULE-SET,Rule-personalads,Adblock
   - RULE-SET,Rule-unityadsdomain,REJECT
