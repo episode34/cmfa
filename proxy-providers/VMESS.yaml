@@ -1,0 +1,17 @@
+proxies:
+- name: sshocean-jaqjwajq
+  server: 172.67.199.34 
+  type: vmess
+  port: 443
+  uuid: ab545387-dcbe-4df6-a33d-aa9406381698
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg1.v2rayserv.com
+  network: ws
+  ws-opts:
+    path: /sshocean
+    headers:
+      Host: sg1.v2rayserv.com
+  udp: true
