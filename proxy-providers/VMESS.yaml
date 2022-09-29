@@ -1,4 +1,5 @@
 proxies:
+
 - name: sshocean-jaqjwajq
   server: 172.67.199.34 
   type: vmess
@@ -14,4 +15,21 @@ proxies:
     path: /sshocean
     headers:
       Host: sg1.v2rayserv.com
+  udp: true
+
+- name: fghhdddg-JAGOANSSH
+  server: 172.67.199.34
+  type: vmess
+  port: 443
+  uuid: 34673185-37ba-441a-b388-bbd64c481c5e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg.vmes.xyz
+  network: ws
+  ws-opts:
+    path: /JAGOANSSH/
+    headers:
+      Host: sg.vmes.xyz
   udp: true
