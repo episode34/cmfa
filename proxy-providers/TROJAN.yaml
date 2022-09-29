@@ -1,0 +1,14 @@
+proxies:
+- name: 14
+  server: 172.67.199.34
+  port: 443
+  type: trojan
+  password: jagoanssh-hsjakaja
+  skip-cert-verify: true
+  sni: sg2go.ipservers.xyz
+  network: ws
+  ws-opts:
+    path: /trojan
+    headers:
+      Host: sg2go.ipservers.xyz
+  udp: true
