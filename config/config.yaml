@@ -117,7 +117,7 @@ proxy-groups:
     proxies:
     use:
       - MSVmess
-  - name: Vmess
+  - name: VMESS
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
