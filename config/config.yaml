@@ -85,7 +85,6 @@ proxy-groups:
       - MSVless
       - MSVmess
       - VMESS
-      - TROJAN
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
