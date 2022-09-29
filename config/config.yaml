@@ -76,11 +76,6 @@ proxy-providers:
     url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/VMESS.yaml
     path: "./Vmess.yaml"
     interval: 300
-  TROJAN:
-    type: http
-    url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/TROJAN.yaml
-    path: "./Vmess.yaml"
-    interval: 300
 proxy-groups:
   - name: MAIN
     type: select
@@ -131,14 +126,6 @@ proxy-groups:
     proxies:
     use:
       - VMESS
-  - name: TROJAN
-    type: url-test
-    url: http://hi.bonds.id/ping
-    interval: 300
-    tolerance: 50
-    proxies:
-    use:
-      - TROJAN
   - name: Adblock
     type: select
     proxies:
