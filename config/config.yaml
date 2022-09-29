@@ -71,6 +71,11 @@ proxy-providers:
     url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/MSVmess.yaml
     path: "./MSVmess.yaml"
     interval: 300
+  VMESS:
+    type: http
+    url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/VMESS.yaml
+    path: "./Vmess.yaml"
+    interval: 300
 proxy-groups:
   - name: MAIN
     type: select
@@ -79,6 +84,7 @@ proxy-groups:
       - MST
       - MSVless
       - MSVmess
+      - VMESS
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
@@ -111,6 +117,14 @@ proxy-groups:
     proxies:
     use:
       - MSVmess
+  - name: Vmess
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+    use:
+      - VMESS
   - name: Adblock
     type: select
     proxies:
