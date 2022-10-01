@@ -12,6 +12,7 @@ proxies:
       headers:
         Host: sg2tws.mainssh.xyz
     udp: true
+    udp-over-tcp: true
   - name: sg3tws.mainssh.xyz
     server: 172.67.199.34
     port: 443
@@ -25,3 +26,18 @@ proxies:
       headers:
         Host: sg3tws.mainssh.xyz
     udp: true
+    udp-over-tcp: true
+  - name: sgtws.mainssh.xyz
+    server: 172.67.199.34
+    port: 443
+    type: trojan
+    password: mainssh-heiwjshs
+    skip-cert-verify: true
+    sni: sg3tws.mainssh.xyz
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: sgtws.mainssh.xyz
+    udp: true
+    udp-over-tcp: true
