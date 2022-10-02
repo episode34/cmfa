@@ -91,6 +91,14 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+  VLESS:
+    type: http
+    url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/VLESS.yaml
+    path: "./Vless.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
 proxy-groups:
   - name: MAIN
     type: select
@@ -100,10 +108,11 @@ proxy-groups:
       - MSVless
       - MSVmess
       - VMESS
+      - VLESS
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
-    interval: 300
+    interval: 10
     tolerance: 50
     proxies:
     use:
@@ -140,6 +149,14 @@ proxy-groups:
     proxies:
     use:
       - VMESS
+  - name: VLESS
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+    use:
+      - VLESS
   - name: Adblock
     type: select
     proxies:
