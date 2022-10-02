@@ -15,3 +15,31 @@ proxies:
       headers:
         Host: idmws.mainssh.xyz
     udp: true
+  - name: id-2.vless.co
+    server: 172.67.199.34
+    type: vless
+    port: 443
+    uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
+    tls: true
+    skip-cert-verify: true
+    servername: id-2.vless.co
+    network: ws
+    ws-opts:
+      path: /fastssh/ksksjsq/633970fcc8895/
+      headers:
+        Host: id-2.vless.co
+    udp: true
+  - name: id-1.vless.co
+    server: 172.67.199.34
+    type: vless
+    port: 443
+    uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
+    tls: true
+    skip-cert-verify: true
+    servername: id-1.vless.co
+    network: ws
+    ws-opts:
+      path: /fastssh/vsjvakaoha/633972538fc2b/
+      headers:
+        Host: id-1.vless.co
+    udp: true
