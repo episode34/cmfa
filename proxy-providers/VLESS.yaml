@@ -1,0 +1,16 @@
+proxies:
+- name: vless-ws-tls
+  server: 172.67.199.34
+  type: vless
+  port: 443
+  uuid: 3260a8c2-3838-4296-ac87-1aa2f4163a68
+  tls: true
+  skip-cert-verify: true
+  servername: sg-freevmess.privateip.net
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: sg-freevmess.privateip.net
+  udp: true
+  udp-over-tcp: true
