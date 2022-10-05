@@ -1,35 +1,31 @@
 proxies:
-
-- name: sshocean-jaqjwajq
-  server: 172.67.199.34 
-  type: vmess
-  port: 443
-  uuid: ab545387-dcbe-4df6-a33d-aa9406381698
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sg1.v2rayserv.com
-  network: ws
-  ws-opts:
-    path: /sshocean
-    headers:
-      Host: sg1.v2rayserv.com
-  udp: true
-
-- name: fghhdddg-JAGOANSSH
-  server: 172.67.199.34
-  type: vmess
-  port: 443
-  uuid: 34673185-37ba-441a-b388-bbd64c481c5e
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sg.vmes.xyz
-  network: ws
-  ws-opts:
-    path: /JAGOANSSH/
-    headers:
-      Host: sg.vmes.xyz
-  udp: true
+  - name: sg2.vless.co
+    server: 172.67.199.34
+    port: 443
+    type: vless
+    uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2.vless.co
+    network: ws
+    ws-opts:
+      path: /fastssh/snvsjgwj/633d689360f39/
+      headers:
+        Host: sg2.vless.co
+    udp: true
+  - name: sg1.vless.co
+    server: 172.67.199.34
+    port: 443
+    type: vless
+    uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg1.vless.co
+    network: ws
+    ws-opts:
+      path: /fastssh/xggxhff/633d6a95c6c59/
+      headers:
+        Host: sg1.vless.co
+    udp: true
