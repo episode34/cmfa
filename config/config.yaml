@@ -51,34 +51,10 @@ rule-providers:
     path: "./unityadsdomain"
     interval: 86400
 proxy-providers:
-  SG:
+  TROJAN:
     type: http
     url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/TH3SG.yaml
     path: "./SG.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  MST:
-    type: http
-    url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/MST.yaml
-    path: "./MST.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  MSVless:
-    type: http
-    url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/MSVless.yaml
-    path: "./MSVless.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  MSVmess:
-    type: http
-    url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers/MSVmess.yaml
-    path: "./MSVmess.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -104,9 +80,6 @@ proxy-groups:
     type: select
     proxies:
       - BEST-PING
-      - MST
-      - MSVless
-      - MSVmess
       - VMESS
       - VLESS
   - name: BEST-PING
@@ -117,30 +90,6 @@ proxy-groups:
     proxies:
     use:
       - SG
-  - name: MST
-    type: url-test
-    url: http://hi.bonds.id/ping
-    interval: 300
-    tolerance: 50
-    proxies:
-    use:
-      - MST
-  - name: MSVless
-    type: url-test
-    url: http://hi.bonds.id/ping
-    interval: 300
-    tolerance: 50
-    proxies:
-    use:
-      - MSVless
-  - name: MSVmess
-    type: url-test
-    url: http://hi.bonds.id/ping
-    interval: 300
-    tolerance: 50
-    proxies:
-    use:
-      - MSVmess
   - name: VMESS
     type: url-test
     url: http://hi.bonds.id/ping
