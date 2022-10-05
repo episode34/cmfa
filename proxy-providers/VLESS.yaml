@@ -1,46 +1,31 @@
 proxies:
-- name: vless-ws-tls
-  server: 172.67.199.34
-  type: vless
-  port: 443
-  uuid: 3260a8c2-3838-4296-ac87-1aa2f4163a68
-  tls: true
-  skip-cert-verify: true
-  servername: sg-freevmess.privateip.net
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: sg-freevmess.privateip.net
-  udp: true
-  udp-over-tcp: true
-- name: sg1.vless.co
-  server: 172.67.199.34
-  type: vless
-  port: 443
-  uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
-  tls: true
-  skip-cert-verify: true
-  servername: sg1.vless.co
-  network: ws
-  ws-opts:
-    path: /fastssh/dhkwjzjs/633949a569e07/
-    headers:
-      Host: sg1.vless.co
-  udp: true
-  udp-over-tcp: true
-- name: sg2.vless.co
-  server: 172.67.199.34
-  type: vless
-  port: 443
-  uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
-  tls: true
-  skip-cert-verify: true
-  servername: sg2.vless.co
-  network: ws
-  ws-opts:
-    path: /fastssh/kskskak/633949523fbd0/
-    headers:
-      Host: sg2.vless.co
-  udp: true
-  udp-over-tcp: true
+  - name: id-2.vless.co
+    server: 172.67.199.34
+    port: 443
+    type: vless
+    uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id-2.vless.co
+    network: ws
+    ws-opts:
+      path: /fastssh/hdhch/633d67f21275e/
+      headers:
+        Host: id-2.vless.co
+    udp: true
+  - name: id-1.vless.co
+    server: 172.67.199.34
+    port: 443
+    type: vless
+    uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id-1.vless.co
+    network: ws
+    ws-opts:
+      path: /fastssh/vjzzxucgj/633d685212b78/
+      headers:
+        Host: id-1.vless.co
+    udp: true
