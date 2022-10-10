@@ -1,9 +1,9 @@
 proxies:
-  - name: SG1
+  - name: 172.67.199.34
     server: 172.67.199.34
     port: 443
     type: trojan
-    password: 9ca73b40-3e7a-11ed-89a2-1239d0255272
+    password: 48be4fa0-48ca-11ed-815f-1239d0255272
     skip-cert-verify: true
     sni: sg1-trojan.bonds.id
     network: ws
@@ -12,29 +12,29 @@ proxies:
       headers:
         Host: sg1-trojan.bonds.id
     udp: true
-  - name: SG2
+  - name: 172.67.199.34 2
     server: 172.67.199.34
     port: 443
     type: trojan
-    password: bcee3e10-3e7a-11ed-aa0e-1239d0255272
+    password: 5beec2c0-48ca-11ed-a6dc-1239d0255272
     skip-cert-verify: true
-    sni: sg2-trojan.bonds.id
+    sni: sg1-trojan.bonds.id
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: sg2-trojan.bonds.id
+        Host: sg1-trojan.bonds.id
     udp: true
-  - name: SG3
+  - name: 172.67.199.34 3
     server: 172.67.199.34
     port: 443
     type: trojan
-    password: cf56b990-3e7a-11ed-97b8-1239d0255272
+    password: 823bd030-48ca-11ed-90e0-1239d0255272
     skip-cert-verify: true
-    sni: sg3-trojan.bonds.id
+    sni: sg1-trojan.bonds.id
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: sg3-trojan.bonds.id
+        Host: sg1-trojan.bonds.id
     udp: true
