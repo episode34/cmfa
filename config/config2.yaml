@@ -50,26 +50,11 @@ rule-providers:
     url: https://raw.githubusercontent.com/episode34/cmfa/main/rule-providers/unityadsdomain.yaml
     path: "./unityadsdomain"
     interval: 86400
-proxy-providers:
-  SG:
-    type: http
-    url: https://raw.githubusercontent.com/episode34/cmfa/main/proxy-providers2/Trojan.yaml
-    path: "./SG.yaml"
-    interval: 300
 proxy-groups:
   - name: MAIN
     type: select
     proxies:
-      - SG-test
       - DIRECT
-  - name: SG-test
-    type: url-test
-    url: http://hi.bonds.id/ping
-    interval: 300
-    tolerance: 50
-    proxies:
-    use:
-      - SG
   - name: Adblock
     type: select
     proxies:
