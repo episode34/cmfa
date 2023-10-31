@@ -61,6 +61,7 @@ proxy-groups:
     type: select
     proxies:
       - SG-test
+      - DIRECT
   - name: SG-test
     type: url-test
     url: http://hi.bonds.id/ping
